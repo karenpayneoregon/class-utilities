@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CopyProjectTemplates.Classes;
+using CopyProjectTemplates.Containers;
 
 namespace CopyProjectTemplates
 {
@@ -16,7 +17,8 @@ namespace CopyProjectTemplates
         public Form1()
         {
             InitializeComponent();
-            
+
+            Mocking.Create();
             FileHelpers.CopyFileHandler += OnCopyFileHandler;
             Shown += OnShown;
         }
